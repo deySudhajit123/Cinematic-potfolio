@@ -1,0 +1,212 @@
+{
+  "name": {
+    "first": "Sudhajit",
+    "last": "Dey",
+    "full": "Sudhajit Dey"
+  },
+  "email": "deysudhajit@gmail.com",
+  "tagline": ".NET Full-Stack Engineer | Building production-grade APIs and scalable systems.",
+  "description": ".NET Full-Stack Engineer building production-grade APIs and scalable systems with modern web technologies.",
+  "roles": {
+    "short": ".NET Full-Stack Engineer",
+    "detailed": "Backend Engineer · Full-Stack Developer · System Design"
+  },
+  "location": {
+    "based": "Kolkata, India",
+    "availability": "Worldwide"
+  },
+  "available": true,
+  "bio": ".NET Full-Stack Engineer with 2+ years building production-grade APIs and SPAs at Ericsson and SassGrow. Strong backend in C# / ASP.NET Core 8 / EF Core / MS SQL Server with Clean Architecture, CQRS, and SOLID; frontend in Angular + TypeScript. Hands-on with Docker, Azure, and CI/CD — focused on measurable latency, reliability, and release-velocity gains in Agile sprints.",
+  "stats": [
+    { "value": "2+", "label": "Years Experience" },
+    { "value": "2", "label": "Featured Projects" },
+    { "value": "2", "label": "Companies" }
+  ],
+  "skills": [
+    "C# / .NET 8",
+    "ASP.NET Core",
+    "Angular + TypeScript",
+    "MS SQL Server",
+    "Entity Framework Core",
+    "Clean Architecture",
+    "CQRS Pattern",
+    "Microservices",
+    "Azure Cloud",
+    "Docker",
+    "REST APIs",
+    "System Designer"
+  ],
+  "experience": [
+    {
+      "id": 1,
+      "role": ".NET Full-Stack Developer",
+      "company": "SassGrow Pvt. Ltd.",
+      "companyShort": "SASSGROW",
+      "type": "Full-time",
+      "location": "India",
+      "period": "Jan 2026",
+      "periodEnd": "Present",
+      "bullets": [
+        "Architected a multi-tenant ASP.NET Core 8 REST API with strict per-tenant data isolation; onboarded enterprise clients via zero-downtime blue-green deployments on Azure App Service.",
+        "Delivered Angular + TypeScript dashboards with lazy-loaded feature modules, RxJS state, Reactive Forms, and JWT-secured routes — standardized UX across modules and improved perceived load performance.",
+        "Tuned EF Core schemas with composite/covering indexes, stored procedures, and Azure Cache for Redis on hot endpoints — held reporting-API p95 latency under 150 ms and cut DB round-trips ~60%.",
+        "Modernized release engineering with multi-stage Dockerfiles and Azure DevOps CI/CD pipelines (build → test → staging → prod gates) — cut deployment time from ~45 min to under 15 min and eliminated manual release errors."
+      ],
+      "desc": "Multi-tenant SaaS platform with ASP.NET Core 8, Angular dashboards, EF Core optimization, and Azure CI/CD. Enterprise-grade performance and security.",
+      "tech": [
+        "C#",
+        "ASP.NET Core 8",
+        "Angular",
+        "TypeScript",
+        "MS SQL Server",
+        "Azure",
+        "Docker",
+        "Redis"
+      ]
+    },
+    {
+      "id": 2,
+      "role": ".NET Backend Developer",
+      "company": "Ericsson Global India Pvt. Ltd.",
+      "companyShort": "ERICSSON",
+      "type": "Full-time",
+      "location": "Bangalore, India",
+      "period": "Apr 2024",
+      "periodEnd": "Sep 2025",
+      "bullets": [
+        "Designed a Network Configuration Management API in ASP.NET Core that retired a legacy monolith and provisioned 200+ live network nodes for internal OSS tooling — cut average provisioning time ~35% for the NOC team.",
+        "Re-engineered a real-time alarm aggregation service into an event-driven pipeline using async/await and Azure Service Bus — drove alert-to-dashboard latency from ~3 s to under 500 ms under peak event load.",
+        "Migrated a legacy .NET Framework 4.8 → .NET Core 8 — shrunk memory footprint ~35% and unlocked Linux-based deployment, lowering monthly compute cost.",
+        "Designed the network performance datastore in MS SQL Server using EF Core migrations, composite indexing, table partitioning, and tuned stored procedures — sustained 10,000+ writes/min with sub-second reads at scale."
+      ],
+      "desc": "Network Configuration Management API, event-driven alarm aggregation, legacy .NET migration, high-performance datastore design sustaining 10,000+ writes/min.",
+      "tech": [
+        "C#",
+        ".NET Core 8",
+        "ASP.NET Core",
+        "MS SQL Server",
+        "EF Core",
+        "Azure Service Bus",
+        "Docker",
+        "Azure DevOps"
+      ]
+    },
+    {
+      "id": 3,
+      "role": "Software Development Engineer Intern",
+      "company": "Ericsson Global India Pvt. Ltd.",
+      "companyShort": "ERICSSON",
+      "type": "Internship",
+      "location": "Bangalore, India",
+      "period": "Mar 2023",
+      "periodEnd": "Mar 2024",
+      "bullets": [
+        "Built Java data mediation adapters for the Ericsson Intelligent Integrated Mediation Platform (EIIMP), normalizing 5G RAN event streams into the central OSS data layer.",
+        "Developed JUnit test suites that surfaced 3 production-blocking defects pre-release, improving code quality and reliability.",
+        "Worked on concurrent programming patterns and REST API design for handling high-volume event streams."
+      ],
+      "desc": "Java data mediation adapters for 5G RAN event stream normalization. Concurrent programming and REST API design with comprehensive test coverage.",
+      "tech": [
+        "Java",
+        "Spring Boot",
+        "JUnit",
+        "REST APIs",
+        "Concurrent Programming"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "Reactivities",
+      "subtitle": "Full-Stack Social Activity Planner",
+      "type": "Full-Stack",
+      "liveDemo": "https://reactivities-production.up.railway.app",
+      "github": "https://github.com/deySudhajit123/Reactivities",
+      "image": "/assets/Reactivities_background.png",
+      "tech": [
+        "ASP.NET Core",
+        ".NET 10",
+        "MediatR (CQRS)",
+        "EF Core",
+        "SignalR",
+        "React 19",
+        "Vite",
+        "TypeScript"
+      ],
+      "desc": "5-layer Clean Architecture social activity planner with real-time comments over SignalR, cursor-based infinite-scroll feed, multi-provider auth (ASP.NET Identity + GitHub OAuth2), and custom resource-level authorization."
+    },
+    {
+      "id": 2,
+      "title": "FinTrack",
+      "subtitle": "Personal Expense Management Platform",
+      "type": "Full-Stack",
+      "liveDemo": "",
+      "github": "https://github.com/deySudhajit123/FinTrack",
+      "image": "/assets/project-fintrack.png",
+      "tech": [
+        "ASP.NET Core",
+        "EF Core",
+        "MS SQL Server",
+        "Angular",
+        "JWT",
+        "Hangfire",
+        "Serilog",
+        "Azure"
+      ],
+      "desc": "REST API (12+ endpoints) with Angular frontend featuring filters, summaries, and charts. JWT auth with Admin/User roles, EF Core row-level ownership filters, composite SQL indexes (<100 ms queries), Hangfire background aggregations."
+    }
+  ],
+  "certifications": [
+    {
+      "id": 1,
+      "title": "Google AI Professional Certificate",
+      "issuer": "Google · Coursera",
+      "year": "May 2026",
+      "link": "https://www.coursera.org/account/accomplishments/specialization/certificate/ETDP8QILVMZ0",
+      "desc": "7-course professional certificate covering AI Fundamentals, Brainstorming, Research, Writing, Content Creation, Data Analysis, and App Building. Built 20+ AI artifacts and vibe coded a custom AI solution."
+    },
+    {
+      "id": 2,
+      "title": "Back-End Development with .NET",
+      "issuer": "Microsoft · Coursera",
+      "year": "Jan 2026",
+      "link": "https://www.coursera.org/account/accomplishments/verify/KRBRCPN6LWSD",
+      "desc": "Microsoft-authorized certificate covering back-end development with .NET — C#, ASP.NET Core, REST APIs, EF Core, and modern server-side architecture patterns."
+    },
+    {
+      "id": 3,
+      "title": "Generative AI Essentials",
+      "issuer": "IBM · Coursera",
+      "year": "May 2026",
+      "link": "https://www.credly.com/badges/d5d183e2-5832-40fc-b934-357cee8c96d8/linked_in_profile",
+      "desc": "IBM Digital Credential — Generative AI fundamentals, capabilities and tools across domains; text, image, and code generation with state-of-the-art GenAI models.",
+      "isBadge": true
+    },
+    {
+      "id": 4,
+      "title": "Generative AI: Introduction and Applications",
+      "issuer": "IBM · Coursera",
+      "year": "May 2026",
+      "link": "https://www.coursera.org/account/accomplishments/verify/2H7WTGTWJD3S",
+      "desc": "Foundations of Generative AI — large language models, diffusion models, and real-world applications across text, image, and code generation."
+    },
+    {
+      "id": 5,
+      "title": "IBM RAG and Agentic AI Professional Certificate",
+      "issuer": "IBM · Coursera",
+      "year": "In Progress",
+      "link": "https://www.coursera.org/professional-certificates/ibm-rag-and-agentic-ai",
+      "desc": "Retrieval-Augmented Generation, agentic AI architectures, LangChain, LlamaIndex, and building production-ready AI pipelines with LLMs.",
+      "inProgress": true
+    }
+  ],
+  "socials": [
+    { "label": "GitHub", "href": "https://github.com/deySudhajit123" },
+    {
+      "label": "LinkedIn",
+      "href": "https://www.linkedin.com/in/sudhajit-dey/"
+    },
+    { "label": "Email", "href": "mailto:deysudhajit@gmail.com" }
+  ]
+}
