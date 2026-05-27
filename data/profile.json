@@ -138,23 +138,23 @@
     },
     {
       "id": 2,
-      "title": "FinTrack",
-      "subtitle": "Personal Expense Management Platform",
+      "title": "Saasify",
+      "subtitle": "Production-Grade Multi-Tenant SaaS Platform",
       "type": "Full-Stack",
       "liveDemo": "",
-      "github": "https://github.com/deySudhajit123/FinTrack",
+      "github": "https://github.com/deySudhajit123/Saasify",
       "image": "/assets/project-fintrack.png",
       "tech": [
-        "ASP.NET Core",
-        "EF Core",
+        "ASP.NET Core 8",
+        "EF Core 8",
         "MS SQL Server",
-        "Angular",
-        "JWT",
+        "React 19",
+        "TypeScript",
         "Hangfire",
-        "Serilog",
+        "Razorpay",
         "Azure"
       ],
-      "desc": "REST API (12+ endpoints) with Angular frontend featuring filters, summaries, and charts. JWT auth with Admin/User roles, EF Core row-level ownership filters, composite SQL indexes (<100 ms queries), Hangfire background aggregations."
+      "desc": "Enterprise-grade multi-tenant SaaS platform with Clean Architecture (Domain → Application → Infrastructure → API). JWT auth with 15-min access / 30-day rotating refresh tokens, IP rate limiting, Free/Pro/Enterprise subscription tiers, Razorpay webhook payment processing (HMAC SHA256), Hangfire background jobs for invoice generation & nightly aggregations, and a React 19 + TypeScript dashboard with Recharts analytics."
     }
   ],
   "certifications": [

@@ -1,11 +1,35 @@
 'use client'
 
-import { useRef } from 'react'
+import { useRef, useEffect } from 'react'
+import Image from 'next/image'
 import { gsap } from '@/lib/gsap'
 import styles from '@/styles/sections/ScreenLoader.module.css'
 
 export default function ScreenLoader({ onDismiss }) {
   const overlayRef = useRef(null)
+  const logoContainerRef = useRef(null)
+  const startBtnRef = useRef(null)
+
+  useEffect(() => {
+    // Elegant floating entrance timeline for premium branding
+    gsap.set(logoContainerRef.current, { opacity: 0, y: 32, scale: 0.95 })
+    gsap.set(startBtnRef.current, { opacity: 0, y: 16 })
+
+    const tl = gsap.timeline({ delay: 0.25 })
+    tl.to(logoContainerRef.current, {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      duration: 1.1,
+      ease: 'power4.out',
+    })
+    .to(startBtnRef.current, {
+      opacity: 1,
+      y: 0,
+      duration: 0.7,
+      ease: 'power3.out',
+    }, '-=0.5')
+  }, [])
 
   function handleStart() {
     window.dispatchEvent(
@@ -93,11 +117,21 @@ export default function ScreenLoader({ onDismiss }) {
     <div ref={overlayRef} className={styles.overlay}>
       <div className={styles.liquidBg} aria-hidden />
 
-      <p className={styles.monogram}>
-        VAIBHAV KHUSHALANI
-      </p>
+      <div ref={logoContainerRef} className={styles.logoContainer}>
+        <Image
+          src="/assets/logo-cropped.png"
+          alt="SD Brand Logo"
+          width={180}
+          height={180}
+          className={styles.logoImg}
+          priority
+        />
+        <h1 className={styles.brandName}>SUDHAJIT DEY</h1>
+        <p className={styles.brandTagline}>SOFTWARE ENGINEER</p>
+      </div>
 
       <button
+        ref={startBtnRef}
         className={styles.startBtn}
         onClick={handleStart}
       >

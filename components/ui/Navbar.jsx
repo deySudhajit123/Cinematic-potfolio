@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import Image from 'next/image'
 import {
   NavigationMenu,
   NavigationMenuList,
@@ -92,6 +93,27 @@ export default function Navbar() {
   return (
     <>
       <header ref={headerRef} className={`${styles.header} ${onIntro ? styles.introMode : ''} ${onDark ? styles.darkMode : ''}`}>
+        <div
+          className={styles.logoWrap}
+          onClick={() => {
+            const scroller = document.querySelector('main')
+            if (scroller) gsap.to(scroller, {
+              scrollTop: 0,
+              duration: 1.0,
+              ease: 'power3.inOut',
+            })
+          }}
+          title="Scroll to Top"
+        >
+          <Image
+            src="/assets/logo-cropped.png"
+            alt="SD Brand Logo"
+            width={32}
+            height={32}
+            className={styles.logoImg}
+          />
+        </div>
+
         <span className={styles.time}>INDIA TIME - {time}</span>
 
         <NavigationMenu className={styles.navMenu}>

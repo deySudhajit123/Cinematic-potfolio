@@ -66,6 +66,25 @@
   transform: scaleX(1);
 }
 
+.logoWrap {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  z-index: 2;
+  will-change: transform, opacity;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.logoImg {
+  filter: drop-shadow(0 0 4px rgba(247, 147, 30, 0.15));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logoWrap:hover .logoImg {
+  transform: scale(1.12) rotate(6deg);
+  filter: drop-shadow(0 0 8px var(--accent));
+}
+
 /* ── Dark section mode (Work Experience) ────── */
 .darkMode {
   --navbar-text: rgba(255, 255, 255, 0.88);
@@ -81,7 +100,13 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/* ── VideoIntro mode: hide time + nav, keep email only ── */
+/* ── VideoIntro mode: hide time + nav + logo, keep email only ── */
+.introMode .logoWrap {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-8px);
+}
+
 .introMode .time {
   opacity: 0;
   pointer-events: none;
@@ -107,6 +132,7 @@
   padding: 0.25rem;
   align-items: center;
   justify-content: center;
+  margin-left: auto; /* Push to far-right on mobile */
 }
 
 @media (max-width: 767px) {
