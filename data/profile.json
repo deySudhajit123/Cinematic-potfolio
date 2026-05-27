@@ -7,6 +7,9 @@
   "email": "deysudhajit@gmail.com",
   "tagline": ".NET Full-Stack Engineer | Building production-grade APIs and scalable systems.",
   "description": ".NET Full-Stack Engineer building production-grade APIs and scalable systems with modern web technologies.",
+  "seo": {
+    "title": "Sudhajit Dey | .Net full-stack developer"
+  },
   "roles": {
     "short": ".NET Full-Stack Engineer",
     "detailed": "Backend Engineer · Full-Stack Developer · System Design"
