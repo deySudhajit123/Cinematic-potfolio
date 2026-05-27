@@ -1,97 +1,103 @@
 # Cinematic Portfolio
 
-A high-performance personal portfolio built with Next.js 16, GSAP, Three.js, and CSS Modules. Designed to be forked and used as your own.
+A cinematic, data-driven portfolio for Sudhajit Dey, built with Next.js 16, React 19, GSAP, Three.js, and CSS Modules.
 
-**Live:** [vaibhav-create.vercel.app](https://vaibhav-create.vercel.app) &nbsp;|&nbsp; **GitHub:** [VaibhavKhushalani/cinematic-portfolio](https://github.com/VaibhavKhushalani/cinematic-portfolio)
+The site is structured around full-screen portfolio sections, GSAP-controlled navigation, animated Three.js visuals, project showcases, certifications, work experience, and a sticky publications/footer experience.
 
-If this helped you, consider leaving a ⭐ on GitHub.
+## Preview
 
-## Stack
+![Portfolio preview](public/assets/Portfolio.png)
 
-| Layer      | Technology                                       |
-| ---------- | ------------------------------------------------ |
-| Framework  | Next.js 16.2 (App Router, React Compiler)        |
-| Animations | GSAP 3 + Three.js                                |
-| Styling    | CSS Modules + Tailwind v4 (tokens only)          |
-| Icons      | react-icons                                      |
-| Fonts      | Geist, Baloo 2, Dancing Script (via next/font)   |
+![Profile image](public/assets/profile.png)
+
+## Tech Stack
+
+| Area | Stack |
+| --- | --- |
+| Framework | Next.js 16.2.6, React 19 |
+| Animation | GSAP, Three.js |
+| Styling | CSS Modules, global CSS tokens |
+| Icons | react-icons |
+| Tooling | ESLint, Playwright |
 
 ## Getting Started
 
+Install dependencies and run the local development server:
+
 ```bash
-git clone https://github.com/VaibhavKhushalani/cinematic-portfolio.git
-cd cinematic-portfolio
 npm install
 npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000).
 
-To build for production:
+Build and run the production app:
 
 ```bash
 npm run build
 npm start
 ```
 
-## Making It Yours
+Run linting:
 
-All personal information lives in `data/profile.json`. Open that file and update the following:
+```bash
+npm run lint
+```
 
-| Field            | What it controls                                    |
-| ---------------- | --------------------------------------------------- |
-| `name`           | Your full name, shown across all sections           |
-| `email`          | Contact email used in footer and CTA buttons        |
-| `tagline`        | One-line professional tagline shown in the hero     |
-| `description`    | Short description shown in footer and meta tags     |
-| `roles`          | Your role title and detailed specializations        |
-| `location`       | Country and availability (e.g. India, Worldwide)    |
-| `bio`            | Long-form bio shown in the About section            |
-| `stats`          | Key numbers: years of experience, projects, etc.    |
-| `skills`         | Skills shown in the scrolling marquee               |
-| `experience`     | Work history with company, role, bullets, and stack |
-| `projects`       | Project cards with title, description, and links    |
-| `publications`   | Blog posts or articles you have written             |
-| `socials`        | Social profile links (GitHub, LinkedIn, etc.)       |
+## Project Structure
 
-Website copy that is not personal data (section taglines, CTA text, footer phrases) lives in `data/content.json`. You can leave these as-is or update them to match your tone.
+```text
+app/                  Next.js App Router pages, layout, metadata, global styles
+components/           Portfolio sections, UI pieces, and Three.js components
+components/three/     Browser-only Three.js experiences
+data/profile.json     Portfolio identity, experience, projects, skills, socials
+data/content.json     Reusable section copy and UI labels
+lib/                  Shared configuration and GSAP setup
+public/assets/        Images, videos, logos, and project media
+public/favicons/      Icons and web app manifest assets
+```
 
-To update colors, open `app/globals.css` and edit the tokens under `:root`. The main ones are `--accent`, `--hero-start`, `--hero-mid`, `--hero-end`, and `--text-primary`.
+## Content Updates
 
-Update your site URL in `lib/siteConfig.js` before deploying.
+All personal portfolio data should be edited in `data/profile.json`, including:
+
+- Name, email, tagline, bio, location, and availability
+- Skills, work experience, projects, certifications, and social links
+
+Reusable section text lives in `data/content.json`.
+
+Site metadata and JSON-LD should use `SITE_URL` from `lib/siteConfig.js`. Update that value before deploying to production.
+
+## Styling
+
+Global design tokens live in `app/globals.css`. Component-specific styles should stay in CSS Modules.
+
+Do not add CSS scroll snap. Section navigation is controlled by `goTo(idx)` in `app/page.js` through GSAP.
 
 ## Assets
 
-Replace the files in `public/assets/` with your own:
+Replace or update media in `public/assets/` as needed. Key assets include:
 
-| File                   | Used in                   | Description                            |
-| ---------------------- | ------------------------- | -------------------------------------- |
-| `about-me.mp4`         | Video Intro               | Full-screen intro video (ambient + main)|
-| `hero.png`             | Hero Section              | Your portrait photo                    |
-| `about.webp`           | About Section, OG Image   | Secondary photo used in about and SEO  |
-| `work-experience.webp` | Work Experience           | Background image for experience section|
-| `footer.png`           | Footer Section            | Image that transitions into the footer |
-| `footer-mobile.webp`   | Footer Section (mobile)   | Static background image for mobile     |
-| `footer-video.mp4`     | Footer Section (desktop)  | Looping background video for footer    |
-| `project-*.png`        | Projects Section          | One image per project in profile.json  |
+- `hero.png`
+- `profile.png`
+- `Portfolio.png`
+- `my_standing_pic.jpg`
+- `work-experience.webp`
+- `footer.png`
+- `footer-mobile.webp`
+- `footer-video.mp4`
+- Project images referenced from `data/profile.json`
 
 ## Deployment
 
-Connect the repository to [Vercel](https://vercel.com) and it deploys automatically with zero configuration.
+The app is ready for deployment on Vercel or any platform that supports Next.js.
 
-Alternatively:
+For Vercel, connect the repository and use the default Next.js settings. Before publishing, confirm:
 
-```bash
-npm i -g vercel
-vercel
-```
+- `lib/siteConfig.js` has the correct production URL
+- `data/profile.json` has final portfolio content
+- Favicons and manifest assets are current
 
 ## License
 
-MIT. Free to fork, adapt, and use as your own portfolio.
-
-## Author
-
-**Vaibhav Khushalani** — Full Stack Engineer & AI Builder
-
-[GitHub](https://github.com/VaibhavKhushalani) &nbsp;|&nbsp; [LinkedIn](https://www.linkedin.com/in/vaibhav-khushalani-760217136) &nbsp;|&nbsp; [Medium](https://medium.com/@vaibhavkhushalani) &nbsp;|&nbsp; [Instagram](https://www.instagram.com/vaibhav.create) &nbsp;|&nbsp; [YouTube](https://www.youtube.com/@vaibhav.create)
+Private portfolio project. Update this section if you intend to publish it under an open-source license.
