@@ -22,7 +22,7 @@
   "bio": ".NET Full-Stack Engineer with 2+ years building production-grade APIs and SPAs at Ericsson and SassGrow. Strong backend in C# / ASP.NET Core 8 / EF Core / MS SQL Server with Clean Architecture, CQRS, and SOLID; frontend in Angular + TypeScript. Hands-on with Docker, Azure, and CI/CD — focused on measurable latency, reliability, and release-velocity gains in Agile sprints.",
   "stats": [
     { "value": "2+", "label": "Years Experience" },
-    { "value": "2", "label": "Featured Projects" },
+    { "value": "3", "label": "Featured Projects" },
     { "value": "2", "label": "Companies" }
   ],
   "skills": [
@@ -158,6 +158,26 @@
         "Azure"
       ],
       "desc": "Enterprise-grade multi-tenant SaaS platform with Clean Architecture (Domain → Application → Infrastructure → API). JWT auth with 15-min access / 30-day rotating refresh tokens, IP rate limiting, Free/Pro/Enterprise subscription tiers, Razorpay webhook payment processing (HMAC SHA256), Hangfire background jobs for invoice generation & nightly aggregations, and a React 19 + TypeScript dashboard with Recharts analytics."
+    },
+    {
+      "id": 3,
+      "title": "FinTrack",
+      "subtitle": "Personal Finance Management API",
+      "type": "Backend API",
+      "liveDemo": "#",
+      "github": "https://github.com/deySudhajit123/FinTrack",
+      "image": "/assets/Reactivities_background.png",
+      "tech": [
+        "ASP.NET Core 10",
+        "EF Core",
+        "MS SQL Server",
+        "ASP.NET Core Identity",
+        "JWT",
+        "Hangfire",
+        "Serilog",
+        "xUnit"
+      ],
+      "desc": "Clean Architecture personal finance API (Domain → Application → Infrastructure → API) with JWT auth and refresh token rotation, per-user data isolation enforced via EF Core global query filters, paginated transaction queries with date/type/category filters, and a nightly Hangfire background job for automated monthly summary generation."
     }
   ],
   "certifications": [
