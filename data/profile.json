@@ -144,7 +144,6 @@
       "title": "Saasify",
       "subtitle": "Production-Grade Multi-Tenant SaaS Platform",
       "type": "Full-Stack",
-      "liveDemo": "#",
       "github": "https://github.com/deySudhajit123/Saasify",
       "image": "/assets/Saasify.png",
       "tech": [
@@ -166,7 +165,7 @@
       "type": "Backend API",
       "liveDemo": "#",
       "github": "https://github.com/deySudhajit123/FinTrack",
-      "image": "/assets/Reactivities_background.png",
+      "image": "/assets/FinTrack_background.png",
       "tech": [
         "ASP.NET Core 10",
         "EF Core",
